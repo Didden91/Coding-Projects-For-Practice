@@ -15,18 +15,35 @@ newlist = list()
 for i in range(inp):
     picknum = random.randint(0,25)
     newlist.append(alf[picknum])
-print(newlist)
-
-# slotnumber == 0
-# for slot in range(len(newlist)):
-#     for item in newlist:
-#     if item == newlist[-1]:
-#         print("last item is:", item)
-#         break
-#     slotnumber += 1
-
-print("slot 3 is: ", newlist[3])
-print("Slot 3:3+2 = ", newlist[3:3+2])
 
 endstring = ''.join(newlist)
 print("End result is", endstring)
+
+itemslot = 0
+record = 0
+for item in range(len(newlist)):
+    # print("Current item:", newlist[item])
+    # print("This was in slot number: ", itemslot)
+    try:
+        test = newlist[itemslot+1]
+    except:
+        break
+    score = 1
+    x = 1
+    while newlist[item] == newlist[itemslot+x]:
+        score += 1
+        x += 1
+        try:
+            test = newlist[itemslot+x]
+        except:
+            break
+    if score > record:
+        record = score
+        print("new record = ", record)
+        print("found @ itemslot %d upto itemslot %d " % (itemslot, itemslot+x))
+        rfis, rlis = itemslot, itemslot+x
+
+    itemslot += 1
+
+
+print("Record chain of same characters is: %d! It was a chain of \"%s\" characters! This chain can be found @ itemslot %d upto itemslot %d" % (record, newlist[rfis], rfis, rlis))
