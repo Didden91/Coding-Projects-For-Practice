@@ -15,12 +15,18 @@ newlist = list()
 for i in range(inp):
     picknum = random.randint(0,25)
     newlist.append(alf[picknum])
-    print(newlist)
+print(newlist)
 
-for item in newlist:
-    if item == len(newlist)
-    if item == item[+1]:
-        print("FOUND a double", item)
+# slotnumber == 0
+# for slot in range(len(newlist)):
+#     for item in newlist:
+#     if item == newlist[-1]:
+#         print("last item is:", item)
+#         break
+#     slotnumber += 1
+
+print("slot 3 is: ", newlist[3])
+print("Slot 3:3+2 = ", newlist[3:3+2])
 
 endstring = ''.join(newlist)
 print("End result is", endstring)
