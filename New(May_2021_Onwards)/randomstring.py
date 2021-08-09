@@ -17,5 +17,10 @@ for i in range(inp):
     newlist.append(alf[picknum])
     print(newlist)
 
+for item in newlist:
+    if item == len(newlist)
+    if item == item[+1]:
+        print("FOUND a double", item)
+
 endstring = ''.join(newlist)
 print("End result is", endstring)
