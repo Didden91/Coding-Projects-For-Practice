@@ -14,17 +14,17 @@ def makeSpacesAround(printspot):
 
     spaces = " "
     if printspot == 0:
-        for x in range(10):
+        for x in range(random.randint(1,20)):
             print(randomchar())
-            time.sleep(0.02)
+            time.sleep(0.015)
     elif printspot == 237:
-        for x in range(10):
+        for x in range(random.randint(1,20)):
             print(spaces*235,randomchar()) # takes space after comma into consideration by using 235
-            time.sleep(0.02)
+            time.sleep(0.015)
     else:
-        for x in range(10):
-            print(spaces*(printspot-1),randomchar(),spaces*(237-printspot-1))
-            time.sleep(0.02)
+        for x in range(random.randint(1,20)):
+            print(spaces*(printspot-1),randomchar(),spaces*(230-printspot-1))
+            time.sleep(0.015)
 
 
 
@@ -33,7 +33,7 @@ def pickspot():
     return x
 
 def randomchar():
-    c = random.randint(1,127)
+    c = random.randint(200,1000)
     return chr(c)
 
 inp = input("how many lines? ")
